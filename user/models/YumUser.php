@@ -205,7 +205,7 @@ class YumUser extends YumActiveRecord
 			$this->salt = $salt;
 			if ($this->validate()) {
 				$this->password = YumEncrypt::encrypt($password, $salt);
-				$this->save(false, array('password'));
+			//	$this->save(false, array('password'));
 			}
 			return $this;
 		}

@@ -38,7 +38,7 @@ class YumProfile extends YumActiveRecord
 
 	public function beforeValidate() {
 		if($this->isNewRecord)
-			$this->timestamp = time();
+			$this->timestamp = new CDbExpression('NOW()');
 		return parent::beforeValidate();
 	}
 
