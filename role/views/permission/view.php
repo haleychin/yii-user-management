@@ -13,7 +13,7 @@ if(isset($actions))
 				}
 				if($permission->type == 'role') {
 					$role = YumRole::model()->findByPk($permission->principal_id);
-					printf('<li>role %s</li>', CHtml::link($role->title, array('/role/view', 'id' => $user->id)));
+					printf('<li>role %s</li>', CHtml::link($role->title, array('/role/view', 'id' => $role->id)));
 				}
 				echo '</ul>';
 			}
