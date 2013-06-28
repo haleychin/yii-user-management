@@ -216,6 +216,7 @@ class YumInstallController extends YumController
 							`user_id` int unsigned NOT NULL,
 							`lastname` varchar(50) NOT NULL default '',
 							`firstname` varchar(50) NOT NULL default '',
+							`allow_comments` tinyint(1) DEFAULT 1,
 							`email` varchar(255) NOT NULL default '',
 							`street` varchar(255),
 							`city` varchar(255),
