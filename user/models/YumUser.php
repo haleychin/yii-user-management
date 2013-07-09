@@ -1,4 +1,4 @@
-<?
+<?php
 
 /**
  * This is the model class for a User in Yum.
@@ -742,7 +742,7 @@ class YumUser extends YumActiveRecord
 
 	public function syncRoles($roles = null) {
 		if(Yum::hasModule('role')){ 
-			Yii::import('application.modules.role.models.*');
+			Yii::import('application.modules.role.models.*');
 
 				$query = sprintf("delete from %s where user_id = %s",
 						Yum::module('role')->userRoleTable,
